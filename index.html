@@ -12,7 +12,7 @@
     <header>
         <h1 id="porti">Portifólio</h1>
         <ul id="itens">
-            <li class="nav"><a href="#principal">Home</a></li>
+            <li class="nav"><a href="#principal" class="active">Home</a></li>
             <li class="nav"><a href="#sobre">Sobre mim</a></li>
             <li class="nav"><a href="#projeto">Projetos</a></li>
             <li class="nav"><a href="#ultimaDiv">Redes Sociais</a></li>
@@ -25,7 +25,7 @@
         <img src="imagens/chaoesquerda.png" alt="fundo" id="fundoCE"> <!-- montanha do 'chão' esqueda-->
         <img src="imagens/chaodireita.png" alt="fundo" id="fundoCD"> <!-- montanha do 'chão' direira-->
         <img src="imagens/nuvens.jpg" alt="fundo" id="fundo"> <!-- foto do fundo-->
-        <h1 id="titulo">Bem vindo ao meu<br> Portifólio</h1>
+        <h1 id="titulo">Bem vindo ao meu Portifólio</h1>
     </section>
 
     <section id="secundario">
@@ -59,15 +59,15 @@
                 <a href="https://akiramath.github.io/Projeto-Cordel/" target="_blank"><img src="imagens/codel.png" id="cordel" class="projetos"></a>
                 <div class="borda">
                     <h3 class="tituloprojeto">Projeto do site Cordel:</h3>
-                    <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo de medias queries e como coloca-las em prática tanto para computador, para televisor, tablet e celular que possibilita deixar o seu site responsivo.<br> Eu adorei participar desse projeto e aprendi muito com ele.</p>
+                    <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo do efeito Parallax, criando um site com um poema que ao rolar a tela você verá as imagens mudando, muito legal esse projeto e aprendi bastante com ele.</p>
                     
                 </div>
             </div>
 
-            <div class="div"><a href="https://akiramath.github.io/Pokedex/" target="_blank"><img src="imagens/pokedex.png" id="poke" class="projetos"></a>
+            <div class="div"><a href="https://akiramath.github.io/Formulario/" target="_blank"><img src="imagens/formulario.png" id="form" class="projetos"></a>
                 <div class="borda">
-                    <h3 class="tituloprojeto">Projeto da Pokédex:</h3>
-                    <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo de medias queries e como coloca-las em prática tanto para computador, para televisor, tablet e celular que possibilita deixar o seu site responsivo.<br> Eu adorei participar desse projeto e aprendi muito com ele.</p>
+                    <h3 class="tituloprojeto">Projeto do Formulário:</h3>
+                    <p class="paragrafo">Este projeto foi feito com meus conhecimentos, esse projeto é de um formulário no qual eu usei o estudo de medias queries que possibilitam deixar o seu formulário responsivo. <br> Eu gostei de trabalhar nesse projeto e aprendi muito com ele.</p>
                     
                 </div>
             </div>
@@ -95,7 +95,7 @@
 
         let login = document.getElementById('login');
         let cordel = document.getElementById('cordel');
-        let poke = document.getElementById('poke');
+        let form = document.getElementById('form');
 
         window.addEventListener('scroll', function(){
             let value = window.scrollY;
@@ -109,7 +109,7 @@
             let valor = window.scrollY;
             login.style.marginLeft = valor / '40.0' + '%';        
             cordel.style.marginLeft = valor / '55.0' + '%';    
-            poke.style.marginLeft = valor / '70.0' + '%';
+            form.style.marginLeft = valor / '70.0' + '%';
         })
 
         function clickMenu(){

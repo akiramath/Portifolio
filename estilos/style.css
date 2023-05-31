@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -50,6 +52,7 @@ header
 
 #porti
 {
+    font-family: 'Lobster', cursive;
     padding: 0 10px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
@@ -66,8 +69,16 @@ header ul li
     margin-left: 20px;
 }
 
+header ul li a.active
+{
+    background-color: #212121;
+    padding: 5px;
+    border-radius: 10px;
+}
+
 a
 {
+    font-family: 'Kalam', cursive;
     font-size: 20px;
     text-decoration: none;
     color: white;
@@ -84,7 +95,7 @@ a
 .nav:hover
 {
     background-color: #212121;
-    backdrop-filter: blur(15px);
+    box-shadow: 0 0 10px white;
 }
 
 #menu
@@ -112,6 +123,7 @@ section
     position: absolute;
     color: #212121;
     text-align: center;
+    font-family: 'Lobster', cursive;
     font-size: 4em;
     z-index: 9000;
 }
@@ -173,6 +185,11 @@ section
     margin: 10% 0;
 }
 
+.titulodecadatopico > h1
+{
+    font-family: 'Lobster', cursive;
+}
+
 .topico1
 {   
     display: flex;
@@ -193,6 +210,7 @@ section
 
 h3
 {
+    font-family: 'Lobster', cursive;
     margin: 10px 0;
     text-align: center;
     font-size: 30px;
@@ -200,12 +218,14 @@ h3
 
 #desenvolvedor
 {
+    font-family: 'Kalam', cursive;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .paragrafo
 {
+    font-family: 'Kalam', cursive;
     padding: 0 40px;
     text-align: center;
     width: 500px;
