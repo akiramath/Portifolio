@@ -86,6 +86,12 @@ a
     border-radius: 10px;
 }
 
+#active:hover
+{
+    background-color: #212121;
+    box-shadow: 0 0 10px white;
+}
+
 .nav
 {
     padding: 5px;
