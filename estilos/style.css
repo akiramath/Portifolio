@@ -1,220 +1,291 @@
 @charset "UTF-8";
-
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Press Start 2P', cursive;
-}
- 
-body{
-    background-color: #1E2131;
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-header{
-    text-align: center;
-    margin-top: 10px;
+html
+{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar
+{
+    width: 6px;
+    background: gray;
+    transition: 1.5s;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #212121;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #212121;
+    transition: 1.5s;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: white;
+    box-shadow: 0 0 10px white;
+}
+
+body
+{
+    min-height: 100vh;
+}
+
+header
+{
     width: 100%;
-}
-header>h1{
-    color: #EE5B55;
-    font-size: 20px;
-}
-nav{
-    display: none;
-}
-
-main{
+    position: fixed;
+    padding: 30px 100px;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#img{
-    width: 100%;
-    text-align: center;
-}
-
-#imagem1{
-    width: 200px;
-}
-
-#img>h1{
-    color: #EE5B55;
-    font-size: 1.5em;
-    margin: auto;
-    margin-bottom: 10px;
-    text-align: center;
-    width: 300px;
-}
-
-#img>p{
+    justify-content: space-between;
     color: white;
-    font-size: 12px;
-    margin: auto;
-    margin-bottom: 30px;
-    width: 300px;
+    z-index: 20000;
 }
 
-#perfil{
-    text-align: center;
-    background-color: #25293c;
-    width: 100%;
-    height: 100%;
-}
- 
-#pc{
-    margin-top: 30px;
-    width: 300px;
-}
-
-h2{
-    margin-right: 20px;
-    text-align: end;
-    color: #EE5B55;
-    font-size: 1em;
-}
-
-#progamador{
-    margin-bottom: 10px;
-    margin-top: 2%;
-    font-size: 15px;
-}
-
-#conteudo>h1{
-    margin:auto;
-    font-size: 1.2em;
-    color: white;
-    border-bottom: 1px solid #EE5B55;
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-#conteudo>p{
-    margin: auto;
-    text-align: justify;
-    font-size: 12px;
-    color: white;
-    padding: 10px;
-    width: 400px;
-    margin-bottom: 10px;
-}
-
-fieldset{
-    margin: auto;
-    width: 380px;
-    height: 160px;
-    border-color: #EE5B55;
-    display: flex;
-}
-
-fieldset>div>p{
-    color: white;
-    padding: 5px;
-    font-size: 12px;
-}
-
-button{
-    padding: 15px;
-    background-color: #EE5B55;
-    color: white;
-    text-shadow: 0px 0px 10px black;
-    font-size: 12px;
-    border: 1px solid white;
-    box-shadow: 4px 4px 0 #EE5B55, 5px 5px 0 white;
+#porti
+{
+    padding: 0 10px;
     border-radius: 10px;
-    margin-bottom: 40px;
-
+    backdrop-filter: blur(5px);
 }
 
-button:active{
-    border: #1E2131;
-    box-shadow: inset -4px 4px 0 #4c1c1a, inset -5px 5px 0 white;
-    background-color: #b44642;
-    color: rgb(230, 230, 230);
-    text-shadow: none;
-}
-
-#sectionfinal{
-    width: 100%;
-    height: 100%;
-    background-color: #343a5b;
-}
-
-#sectionfinal>p{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 12px;
-    text-align: center;
-}
-
-#sectionfinal>h1{
-    margin:auto;
-    width: 270px;
-    font-size: 1.2em;
-    color: white;
-    border-bottom: 1px solid #EE5B55;
-    
-}
-
-#fields{
-    margin-top: 20px;
-}
-
-.icones{
-    width: 50px;
-    margin-top: 10px;
-    margin:auto;
-
-}
-
-.projetos{
-    margin-bottom: 20px;
+header ul
+{
+    list-style: none;
     display: flex;
-    font-size: 12px;
-    text-align: center;
-    flex-direction: column;
-    width: 300px;
-    height: 320px;
 }
 
-#ii{
-    margin-right: 20px;
+header ul li
+{
+    margin-left: 20px;
 }
 
-h3{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: white;
-}
-
-.fotos{
-    width: 200px;
-    margin: auto;
-}
-
-#pokedex{
-    width: 180px;
-}
-
-#login{
-    margin-top: 20px;
-    width: 250px;
-}
-
-.links{
+a
+{
+    font-size: 20px;
     text-decoration: none;
     color: white;
-    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.botaolink{
-    width: 180px;
-    margin-top: 10px;
-    
+.nav
+{
+    padding: 5px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.nav:hover
+{
+    background-color: #212121;
+    backdrop-filter: blur(15px);
+}
+
+#menu
+{
+    display: none;
+    width: 20px;
+}
+
+section
+{
+    overflow: hidden;
+}
+
+#principal
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;   
+}
+
+#titulo
+{
+    position: absolute;
+    color: #212121;
+    text-align: center;
+    font-size: 4em;
+    z-index: 9000;
+}
+
+#fundo
+{
+    width: 1750px;
+    height: 100%;
+}
+
+#fundoME
+{   
+    width: 32%;
+    margin-bottom: 2%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 10000;
+}
+
+#fundoMD
+{
+    width: 32%;
+    margin-bottom: 2%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 10000;
+}
+
+#fundoCE
+{   
+    width: 50%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 10000;
+}
+
+#fundoCD
+{
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 10000;
+}
+
+#secundario
+{
+    color: white;
+    background-color: #212121;
+}
+
+.titulodecadatopico
+{
+    text-align: center;
+    font-size: 2em;
+    margin: 10% 0;
+}
+
+.topico1
+{   
+    display: flex;
+    justify-content: space-around;
+}
+
+.eu
+{
+    padding: 20px;
+    width: 380px;
+    transition: 1s;
+}
+
+.eu:hover
+{
+    width: 400px;
+}
+
+h3
+{
+    margin: 10px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+#desenvolvedor
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.paragrafo
+{
+    padding: 0 40px;
+    text-align: center;
+    width: 500px;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.div
+{
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 100px;
+}
+
+.borda
+{
+    margin-top: 8%;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.projetos
+{
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 20px;
+    box-shadow: -10px 10px 10px white;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.projetos:hover
+{
+    width: 220px;
+    box-shadow: 0px 0px 10px white;
+}
+
+#perfil
+{
+    text-align: center;
+    margin: 50px;
+    font-size: 20px;
+}
+
+#sociais
+{
+    margin-top: 200px;
+}
+
+#linkprojetos
+{
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+#linkprojetos:hover
+{
+    padding: 20px;
+    background-color: rgba(240, 248, 255, 0.712);
+    color: #212121;
+    border-radius: 20px;
+}
+
+.sociais
+{
+    width: 50px;
+    transition: 1s;
+}
+
+.sociais:hover
+{
+    width: 60px;
+}
+
+#ultimaDiv
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
 }

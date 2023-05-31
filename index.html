@@ -4,90 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Portifólio</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <title>Site</title>
 </head>
-<body>
+<body onresize="mudou()">
     <header>
-        <h1><span style="color:white">P</span>ortifólio.io</h1>
-        <nav>
-            <a id="buton" href="#" style="color:#EE5B55">Home</a>
-            <a id="buton" href="#">Quem Sou?</a>
-            <a id="buton" href="#">Projetos</a>
-            <a id="buton" href="#">Sociais</a>
-        </nav>
+        <h1 id="porti">Portifólio</h1>
+        <ul id="itens">
+            <li class="nav"><a href="#principal">Home</a></li>
+            <li class="nav"><a href="#sobre">Sobre mim</a></li>
+            <li class="nav"><a href="#projeto">Projetos</a></li>
+            <li class="nav"><a href="#ultimaDiv">Redes Sociais</a></li>
+        </ul>
+        <img src="imagens/menu.png" alt="menu" id="menu" width="20px" onclick="clickMenu()">
     </header>
-    <main>
-            <section id="img">
-                <img id="imagem1" src="imagens/eu.png">
-                    <h1>Matheus Mansano</h1>
-                    <p>Desenvolvedor Front-end Júnior, Esdutante....</p>
-            </section>
-            <section id="perfil">
-                <h2>01 ---</h2>
-                <div><img id="pc" src="imagens/pc.png" alt=""></div>
-                <div id="conteudo">
+    <section id="principal">
+        <img src="imagens/montanhaesquerda.png" alt="fundo" id="fundoME"> <!-- foto da montanha grande esquerda-->
+        <img src="imagens/montanhadireita.png" alt="fundo" id="fundoMD"> <!-- foto da montanha grande direita-->
+        <img src="imagens/chaoesquerda.png" alt="fundo" id="fundoCE"> <!-- montanha do 'chão' esqueda-->
+        <img src="imagens/chaodireita.png" alt="fundo" id="fundoCD"> <!-- montanha do 'chão' direira-->
+        <img src="imagens/nuvens.jpg" alt="fundo" id="fundo"> <!-- foto do fundo-->
+        <h1 id="titulo">Bem vindo ao meu<br> Portifólio</h1>
+    </section>
+
+    <section id="secundario">
+
+        <div id="sobre" class="titulodecadatopico"><h1>Sobre mim</h1></div>
+
+        <!-- Tópico sobre mim-->
+        <div class="topico1">
+            <img src="imagens/eu.png" id="eu" class="eu">
+            <div class="borda">
+                <h3>Matheus Mansano Rodrigues</h3>
+                <p id="desenvolvedor">Desenvolvedor Front-end - Estudante.</p>
+                <p class="paragrafo"><span style="margin-left: 10px;">Olá</span> sou o Matheus tenho 23 anos, sou uma pessoa proativa que está sempre querendo espandir seus conhecimentos, tenho conhecimento em HTML5, CSS, Javascript e Python - básico.<br>
+                    <span style="margin-left: 10px;">Estou</span> cursando a faculdade de Analise e Desenvolvimento de Sistemas atualmente e estou adorando, estou a procura de uma oportunidade para colocar meus conhecimentos em prática e aprender mais a cada dia.....</p>
+            </div>
+        </div>
+
+        <div id="projeto" class="titulodecadatopico"><h1>Projetos</h1></div>
+
+        <!-- Tópico dos projetos-->
+        <div class="topico2">
+            <div class="div"><a href="https://akiramath.github.io/Pagina-de-login/" target="_blank"><img src="imagens/login.png" id="login" class="projetos"></a>
+            <div class="borda">
+                <h3 class="tituloprojeto">Projeto de Login:</h3>
+                <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo de medias queries e como coloca-las em prática tanto para computador, para televisor, tablet e celular que possibilita deixar o seu site responsivo.<br> Eu adorei participar desse projeto e aprendi muito com ele.</p>
+               
+            </div>
+            </div>
+
+            <div class="div">
+                <a href="https://akiramath.github.io/Projeto-Cordel/" target="_blank"><img src="imagens/codel.png" id="cordel" class="projetos"></a>
+                <div class="borda">
+                    <h3 class="tituloprojeto">Projeto do site Cordel:</h3>
+                    <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo de medias queries e como coloca-las em prática tanto para computador, para televisor, tablet e celular que possibilita deixar o seu site responsivo.<br> Eu adorei participar desse projeto e aprendi muito com ele.</p>
                     
-                    <div>
-                        <p id="progamador" style="color:#EE5B55">Progamador</p>
-                    </div>
-                    <h1>Sobre mim</h1>
-
-                    <p>Meu nome é Matheus Mansano, estou estudando para me tornar um progamador Front-end e tenho conhecimentos em HTML, CSS, um pouco de Javaacript, Python, php.
-                        Estou a procura de uma oportunidade para me desenvolver profissionalmente e conto com seu apoio....
-                    </p>
-                        <fieldset >
-                            <div>
-                                <p>Nome: Matheus Mansano</p>
-                                <p>Telefone: (43) <br>98808-0637</p>
-                                <p>Experiência: 6 meses</p>
-                            </div>
-
-                            <div>
-                                <p>Email: matheusmansano1@gmail.com</p>
-                                <p>Idade: 23</p>
-                                <p>Localidade: Cambé-pr</p>
-                            </div>
-                        </fieldset><br>
-                    <button>Dowloading CV</button>
                 </div>
-            </section>
-            <section id="sectionfinal">
+            </div>
 
-                    <h2 id="ii">02 ---</h2>
-                    <p style="color:#EE5B55">Alguns dos</p>
-                    <h1>Meus Projetos!</h1>
-
-                <div id="fields">
-                    <fieldset  class="projetos">
-
-                        <img class="icones" src="imagens/cordel.png">
-                        <h3>Projeto Cordel</h3>
-                        <img class="fotos" id="cordel" src="imagens/projeto-cordel.png">
-                        <div><button class="botaolink"><a class="links" href="https://akiramath.github.io/Projeto-Cordel/" target="_blank">Clique aqui!</a></button></div>
-                    </fieldset>
-
-
-                    <fieldset class="projetos">
-
-                        <img class="icones" src="imagens/pokedex.png">
-                        <h3>Pokedex</h3>
-                        <img class="fotos" id="pokedex" src="imagens/pokedex-ft.png">
-                        <div><button class="botaolink"><a class="links" href="https://akiramath.github.io/Pokedex/" target="_blank">Clique aqui!</a></button></div>
-
-                    </fieldset>
-
-                    <fieldset class="projetos">
-
-                        <img class="icones" src="imagens/login.png">
-                        <h3>Página de Login</h3>
-                        <img class="fotos" id="login" src="imagens/pagina-login.png">
-                        <div><button class="botaolink"><a class="links" href="https://akiramath.github.io/Pagina-de-login/" target="_blank">Clique aqui!</a></button></div>
-
-                    </fieldset>
+            <div class="div"><a href="https://akiramath.github.io/Pokedex/" target="_blank"><img src="imagens/pokedex.png" id="poke" class="projetos"></a>
+                <div class="borda">
+                    <h3 class="tituloprojeto">Projeto da Pokédex:</h3>
+                    <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo de medias queries e como coloca-las em prática tanto para computador, para televisor, tablet e celular que possibilita deixar o seu site responsivo.<br> Eu adorei participar desse projeto e aprendi muito com ele.</p>
+                    
                 </div>
-            </section>
-        </main>
+            </div>
+
+        </div>
+
+        <div id="perfil"><p><a href="https://github.com/akiramath" target="_blank" id="linkprojetos">Ver mais Projetos...</a></p></div>
+        <div id="sociais" class="titulodecadatopico"><h1>Redes Sociais</h1></div>
+
+        <!-- Tópico das midias sociais-->
+        <div id="ultimaDiv">
+            <div><a href="https://wa.me/qr/3QZVNEICQGXNJ1" target="_blank"><img src="imagens/whatsapp.png" id="whats" class="sociais"></a></div>
+            <div><a href=""><img src="imagens/gmail.png" id="gmail" class="sociais"></a></div>
+            <div><a href="https://www.linkedin.com/in/matheusmansanorodrigues/" target="_blank">
+            <img src="imagens/linkedin.png" id="linkedin" class="sociais"></a></div>
+            <div><a href="https://github.com/akiramath" target="_blank"><img src="imagens/github.png" id="git" class="sociais"></a></div>
+        </div>
+    </section>
+
+    <script>
+        let text = document.getElementById('titulo');
+        let mon1 = document.getElementById('fundoMD');
+        let mon2 = document.getElementById('fundoME');
+        let fundo = document.getElementById('fundo');
+
+        let login = document.getElementById('login');
+        let cordel = document.getElementById('cordel');
+        let poke = document.getElementById('poke');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            fundo.style.marginRight = value / '15.0' + '%';
+            text.style.marginTop = value + 'px';
+            mon1.style.marginRight = value / '35.0' + '%';
+            mon2.style.marginLeft = value / '35.0' + '%';
+        })
+        
+        window.addEventListener('scroll', function(){
+            let valor = window.scrollY;
+            login.style.marginLeft = valor / '40.0' + '%';        
+            cordel.style.marginLeft = valor / '55.0' + '%';    
+            poke.style.marginLeft = valor / '70.0' + '%';
+        })
+
+        function clickMenu(){
+            if ( itens.style.display == 'block') {
+                itens.style.display = 'none';
+            } else {
+                itens.style.display = 'block';
+            }
+        }
+
+        function mudou(){
+            if (window.innerWidth >= 700){
+                itens.style.display = 'flex';
+            } else {
+                itens.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>

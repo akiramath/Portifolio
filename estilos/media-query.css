@@ -1,0 +1,281 @@
+@media screen and (min-width: 500px) and (max-width: 700px){
+    header
+    {
+        justify-content: none;
+        padding: 20px ;
+    }
+    
+    #porti
+    {
+        font-size: 1.5em;
+        margin: auto;
+    }
+
+    a
+    {
+        font-size: 1em;
+    }
+
+    header ul li
+    {
+        margin-top: 5%;
+    }
+
+    .nav
+    {
+        padding: 10px;
+        background-color: #2121214a;
+    }
+
+    #menu
+    {
+        display: block;
+        width: 30px;
+    }
+
+    #itens
+    {
+        right: 10px;
+        top: 50px;
+        display: none;
+        position: absolute;
+        animation: opcoes 0.5s linear;
+    }
+
+    @keyframes opcoes {
+        from {
+            right: -100%;
+        }
+        to {
+            right: 0;
+        }
+    }
+
+    #principal
+    {
+        position: relative;  
+    }
+
+    #titulo
+    {
+        font-size: 2.5em;
+    }
+
+    #fundo
+    {
+        width: 180%;
+    }
+
+    #fundoMD
+    {   
+       display: none;
+    }
+
+    #fundoME
+    {
+        display: none;
+    }
+
+    #fundoCE
+    {   
+        width: 50%;
+    }
+
+    #fundoCD
+    {
+        width: 50%;
+    }
+
+    .titulodecadatopico
+    {
+        font-size: 1.5em;
+    }
+
+    .topico1
+    {
+        padding: 0;
+        display: block;
+    }
+
+    .eu
+    {
+        padding: 0;
+        margin-left: 17%;
+        width: 60%;
+    }
+
+    .eu:hover
+    {
+        width: 65%;
+    }
+
+    .borda
+    {
+        margin: auto;
+        margin-top: 10%;
+        width: 400px;
+    }
+
+    h3
+    {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+
+    .paragrafo
+    {
+        padding: 0 40px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .div
+    {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .projetos
+    {
+        width: 35%;
+    }
+
+    .projetos:hover
+    {
+        width: 40%;
+    }
+
+    .tituloprojeto
+    {
+        margin-top: 10px 0;
+    }
+
+    #sociais
+    {
+        margin-top: 50px;
+    }
+} 
+
+@media screen and (min-width: 700px) and (max-width: 900px){
+    header
+    {
+        justify-content: space-evenly;
+        padding: 20px ;
+    }
+    
+    #porti
+    {
+        font-size: 1.7em;
+    }
+
+    a
+    {
+        font-size: 1em;
+    }
+
+    #principal
+    {
+        position: relative;  
+    }
+
+    #titulo
+    {
+        font-size: 3.2em;
+    }
+
+    #fundo
+    {
+        width: 180%;
+    }
+
+    #fundoMD
+    {   
+       width: 30%;
+    }
+
+    #fundoME
+    {
+        width: 30%;
+    }
+
+    #fundoCE
+    {   
+        width: 50%;
+    }
+
+    #fundoCD
+    {
+        width: 50%;
+    }
+
+    .titulodecadatopico
+    {
+        font-size: 1.5em;
+    }
+
+    .topico1
+    {
+        padding: 0;
+        display: block;
+    }
+
+    .eu
+    {
+        padding: 0;
+        width: 40%;
+        margin-top: -30px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .eu:hover
+    {
+        width: 45%;
+    }
+
+    .borda
+    {
+        width: 600px;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    h3
+    {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+
+    .paragrafo
+    {
+        padding: 0 40px;
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .div
+    {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .projetos
+    {
+        width: 30%;
+    }
+
+    .projetos:hover
+    {
+        width: 35%;
+    }
+
+    .tituloprojeto
+    {
+        margin-top: 10px 0;
+    }
+
+    #sociais
+    {
+        margin-top: 50px;
+    }
+}
