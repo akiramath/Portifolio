@@ -205,14 +205,9 @@ section
 
 .eu
 {
-    padding: 20px;
-    width: 380px;
-    transition: 1s;
-}
-
-.eu:hover
-{
+    padding: 20px 0;
     width: 400px;
+    transition: 1s;
 }
 
 h3
@@ -262,6 +257,7 @@ h3
     box-shadow: -10px 10px 10px white;
     transition: 1s;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .projetos:hover
