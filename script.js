@@ -1,34 +1,52 @@
-let text = document.getElementById('titulo');
-let mon1 = document.getElementById('fundoMD');
-let mon2 = document.getElementById('fundoME');
-let fundo = document.getElementById('fundo');
+let txt = document.getElementById('sobremim');
+var imagens = ["imagens/Projetos/tarefa.png", "imagens/Projetos/cordel.png", "imagens/Projetos/form.png", "imagens/Projetos/login.png"];
+var titulos = ["Projeto de lista de Tarefas:", "Projeto Cordel:", "Projeto de Formulário", "Projeto de Login:"]
+var ps = [ 
+    `Desenvolver este projeto em JavaScript me permitiu aprofundar meus conhecimentos na linguagem, explorando recursos avançados, como filtros e opções de pesquisa. Além disso, aprendi a armazenar as tarefas localmente, oferecendo aos usuários a capacidade de salvar, excluir e editar suas tarefas. Foi uma experiência extremamente empolgante e valiosa do ponto de vista de aprendizado. Estou imensamente satisfeito por ter concluído esse projeto e orgulhoso do resultado alcançado.`,
 
-let login = document.getElementById('login');
-let cordel = document.getElementById('cordel');
-let form = document.getElementById('form');
+    `Nesse projeto foi abordado o estudo do efeito Parallax, no qual criei um site com um poema onde as imagens mudam à medida que você rola a tela. Foi uma experiência fascinante e enriquecedora, proporcionando um aprendizado significativo nesse campo.`,
 
-//função de mover das montanhas
-window.addEventListener('scroll', function(){
-    let value = window.scrollY;
-    fundo.style.marginRight = value / '30.0' + '%';
-    text.style.marginTop = value + 'px';
-    mon1.style.marginRight = value / '35.0' + '%';
-    mon2.style.marginLeft = value / '35.0' + '%';
-})
+    `Utilizando meus conhecimentos, desenvolvi um projeto de formulário no qual explorei o uso de media queries para torná-lo responsivo. A experiência de trabalhar nesse projeto foi gratificante e me proporcionou um aprendizado significativo.`,
 
-//função do hambúrguer
-function clickMenu(){
-    if ( itens.style.display == 'block') {
-        itens.style.display = 'none';
+    ` Este projeto foi desenvolvido com base no meu aprendizado no curso de HTML e CSS do Curso em Vídeo. Foi abordado o estudo de media queries e sua aplicação prática, permitindo tornar o site responsivo em diferentes dispositivos, como computadores, televisores, tablets e smartphones. A experiência de participar desse projeto foi incrível e me proporcionou um aprendizado valioso.` ];
+
+var idx = 0;
+
+
+// botao sobre mim
+function sobre(){
+    if(txt.style.display == 'block'){
+        txt.style.display = 'none';
     } else {
-        itens.style.display = 'block';
+        txt.style.display = 'block';
     }
 }
 
-function mudou(){
-    if (window.innerWidth >= 600){
-        itens.style.display = 'flex';
+// projetos
+function trocarAnterior() {
+    if (idx > 0) {
+      idx--;
     } else {
-        itens.style.display = 'none';
+      idx = imagens.length - 1;
     }
+    atualizarConteudo();
+}
+
+function trocarProxima() {
+    if (idx < imagens.length - 1) {
+      idx++;
+    } else {
+      idx = 0;
+    }
+    atualizarConteudo();
+}
+
+function atualizarConteudo() {
+    var titulo = document.getElementById("titulo-proj");
+    var imagem = document.getElementById("img");
+    var descricao = document.getElementById("conteudo-proj");
+  
+    titulo.textContent = titulos[idx];
+    imagem.src = imagens[idx];
+    descricao.textContent = ps[idx];
 }

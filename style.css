@@ -1,0 +1,253 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #000000;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+/* Header */
+
+header{
+    position: fixed;
+    width: 100vw;
+    height: 60px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+header h1{
+    margin: 10px 0 0 40px;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+header nav{
+    margin-top: 30px;
+}
+
+.a-header{
+    margin:0 90px;
+    padding: 10px;
+    background-color: rgb(251,252,251);
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.a-header:hover{
+    background-color: black;
+    color: white;
+}
+
+/* Perfil */
+
+main{
+    position: absolute;
+    z-index: 0;
+}
+
+#Perfil{
+    width: 100vw;
+    color: white;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.perfil-txt{
+    margin-top: 130px;   
+}
+
+.perfil-txt h1{
+    width: 700px;
+    background-color: white;
+    color: black;
+    margin: auto;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 4em;
+}
+
+.perfil-txt h2{
+    width: 300px;
+    background-color: black;
+    margin: auto;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.perfil-txt button{
+    padding: 10px;
+    margin: 50px 0 30px 0;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.perfil-txt button:hover{
+    background-color: white;
+    color: black;
+}
+
+#sobremim{
+    display: none;
+    background-color: white;
+    color: black;
+    width: 900px;
+    padding: 20px;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 30px;
+}
+
+/* Projetos */
+
+#projetos-todo{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin: 200px auto;
+    margin-bottom: 0;
+    border-radius: 30px;
+}
+
+.imgproj{
+    width: 600px;
+    margin: 30px 0 0 30px;
+    border-radius: 30px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+span{
+    pointer-events: none;
+}
+
+#ant{
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: -50px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#prox{
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 13px;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#click{
+    text-align: center;
+}
+
+#titulo-proj{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5em;
+}
+
+#conteudo-proj{
+    width: 600px;
+    margin: 50px auto;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/* Hard Skill */
+
+#hardskill-todo{
+    width: 70rem;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.skills h3, 
+.div-social h3{
+    text-align: center;
+    margin: 10px 0 30px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.imgs-skill, .sociais{
+    padding: 30px;
+    width: 150px;
+    transition: 1s;
+}
+
+.imgs-skill:hover,
+.sociais:hover{
+    width: 200px;
+}
+
+
+.sales{
+    width: 200px;
+}
+
+.sales:hover{
+    width: 250px;
+}
+/* Redes Sociais */
+
+#Redes{
+    width: 70rem;
+    margin: auto;
+    margin-bottom: 100px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* divs para arruma o a do header */
+
+#Projetos{
+    transform: translateY(120px);
+}
+
+#HardSkill{
+    transform: translateY(20px);
+}

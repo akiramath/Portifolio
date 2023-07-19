@@ -2,95 +2,69 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/media-query.css">
-    <link rel="stylesheet" href="script.js">
-    <title>Site</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Portifólio</title>
 </head>
-<body onresize="mudou()">
+<body>
+    <video src="imagens/fundo.mp4" autoplay loop muted></video>
     <header>
-        <h1 id="porti">Portifólio</h1>
-        <ul id="itens">
-            <li><a href="#principal" id="active">Home</a></li>
-            <li class="nav"><a href="#sobre">Sobre mim</a></li>
-            <li class="nav"><a href="#projeto">Projetos</a></li>
-            <li class="nav"><a href="#ultimaDiv">Redes Sociais</a></li>
-        </ul>
-        <img src="imagens/menu.png" alt="menu" id="menu" width="20px" onclick="clickMenu()">
+        <nav>
+            <a class="a-header" href="index.html">Home</a>
+            <a class="a-header" href="#Projetos">Projetos</a>
+            <a class="a-header" href="#HardSkill">Hard Skill</a>
+            <a class="a-header" href="#Redes">Sociais</a>
+        </nav>
     </header>
-    <section id="principal">
-        <img src="imagens/montanhaesquerda.png" alt="fundo" id="fundoME"> <!-- foto da montanha grande esquerda-->
-        <img src="imagens/montanhadireita.png" alt="fundo" id="fundoMD"> <!-- foto da montanha grande direita-->
-        <img src="imagens/chaoesquerda.png" alt="fundo" id="fundoCE"> <!-- montanha do 'chão' esqueda-->
-        <img src="imagens/chaodireita.png" alt="fundo" id="fundoCD"> <!-- montanha do 'chão' direira-->
-        <img src="imagens/nuvens.jpg" alt="fundo" id="fundo"> <!-- foto do fundo-->
-        <h1 id="titulo">Bem vindo ao meu Portifólio</h1>
-    </section>
-
-    <section id="secundario">
-
-        <div id="sobre" class="titulodecadatopico"><h1>Sobre mim</h1></div>
-
-        <!-- Tópico sobre mim-->
-        <div class="topico1">
-            <img src="imagens/eu.png" id="eu" class="eu">
-            <div class="borda">
-                <h3>Matheus Mansano Rodrigues</h3>
-                <p id="desenvolvedor">Desenvolvedor Front-end - Estudante.</p>
-                <p class="sobremim"><span style="margin-left: 10px;">Olá</span> sou o Matheus tenho 23 anos, sou uma pessoa proativa que está sempre querendo espandir seus conhecimentos, tenho conhecimento em HTML5, CSS, Javascript e Python - básico.<br>
-                    <span style="margin-left: 10px;">Estou</span> cursando a faculdade de Analise e Desenvolvimento de Sistemas atualmente e estou adorando, estou a procura de uma oportunidade para colocar meus conhecimentos em prática e aprender mais a cada dia.....</p>
+    <main>
+        <section id="Perfil">
+            <div class="perfil-txt">
+                <h1>MATHEUS MANSANO <br>RODRIGUES</h1>
+                <h2>Desenvolvedor Front-end</h2>
+                <button onclick="sobre()">Sobre mim</button>
+                <p id="sobremim">Olá sou o Matheus tenho 24 anos, sou uma pessoa proativa que está sempre querendo expandir seus conhecimentos, 
+                    tenho conhecimento em HTML5, CSS, Javascript e Python - básico.
+                    Estou cursando a faculdade de Analise e Desenvolvimento de Sistemas atualmente e estou adorando, estou a procura de uma 
+                    oportunidade para colocar meus conhecimentos em prática e aprender mais a cada dia.....</p>
             </div>
-        </div>
+        </section>
 
-        <div id="projeto" class="titulodecadatopico"><h1>Projetos</h1></div>
+        <div id="Projetos"></div>
+        <section id="projetos-todo">
+            <div class="cadaprojeto">
+                <button id="ant" onclick="trocarAnterior()"><span class="material-symbols-outlined">keyboard_double_arrow_left</span></button>
+                <a href="https://akiramath.github.io/Pagina-de-login/" target="_blank"><img src="imagens/Projetos/tarefa.png" class="imgproj" id="img"></a>
+                <button id="prox" onclick="trocarProxima()"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></button>
+                <p id="click">click na imagem para ver o projeto em uma nova aba</p>
+                <h3 id="titulo-proj">Projeto de lista de Tarefas:</h3>
+                <p id="conteudo-proj">Desenvolver este projeto em JavaScript me permitiu aprofundar meus conhecimentos na linguagem, explorando recursos avançados, como filtros e opções de pesquisa. Além disso, aprendi a armazenar as tarefas localmente, oferecendo aos usuários a capacidade de salvar, excluir e editar suas tarefas. Foi uma experiência extremamente empolgante e valiosa do ponto de vista de aprendizado. Estou imensamente satisfeito por ter concluído esse projeto e orgulhoso do resultado alcançado.</p>
+            </div>
+        </section>
 
-        <!-- Tópico dos projetos-->
-        <div class="topico2">
-                <div class="card" id="cordel">
-                    <div class="imgBox">
-                        <img src="imagens/cordel.png" alt="">
-                    </div>
-                    <div class="text">
-                        <h3 class="tituloprojeto">Projeto do site Cordel:</h3>
-                        <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo do efeito Parallax, criando um site com um poema que ao rolar a tela você verá as imagens mudando, muito legal esse projeto e aprendi bastante com ele.</p>
-                        <a href="https://akiramath.github.io/Projeto-Cordel/" target="_blank" class="clique">Clique Aqui</a>
-                    </div>
-                </div>
-                <div class="card" id="login">
-                    <div class="imgBox">
-                        <img src="imagens/login.png" alt="">
-                    </div>
-                    <div class="text">
-                        <h3 class="tituloprojeto">Projeto de Login:</h3>
-                    <p class="paragrafo">Este projeto foi feito com meu aprendizado no curso de HTML e CSS do Curso em Video, é um projeto que foi abordado o estudo de medias queries e como coloca-las em prática tanto para computador, para televisor, tablet e celular que possibilita deixar o seu site responsivo.<br> Eu adorei participar desse projeto e aprendi muito com ele.</p>
-                        <a href="https://akiramath.github.io/Pagina-de-login/" target="_blank"  class="clique">Clique Aqui</a>
-                    </div>
-                </div>
-                <div class="card" id="form">
-                    <div class="imgBox">
-                        <img src="imagens/formulario.png" alt="">
-                    </div>
-                    <div class="text">
-                        <h3 class="tituloprojeto">Projeto do Formulário:</h3>
-                        <p class="paragrafo">Este projeto foi feito com meus conhecimentos, esse projeto é de um formulário no qual eu usei o estudo de medias queries que possibilitam deixar o seu formulário responsivo. <br> Eu gostei de trabalhar nesse projeto e aprendi muito com ele.</p>
-                        <a href="https://akiramath.github.io/Formulario/" target="_blank" class="clique">Clique Aqui</a>
-                    </div>
-                </div> 
-        </div>
+        <div id="HardSkill"></div>
+        <section id="hardskill-todo">
+            <div class="skills">
+                <h3>Tenho familiaridade com essas linguagens:</h3>
+                <img src="imagens/Hards-Skills/salesforce.png" alt="Salesforce" class="imgs-skill sales">
+                <img src="imagens/Hards-Skills/html.png" alt="html" class="imgs-skill">
+                <img src="imagens/Hards-Skills/css.png" alt="css" class="imgs-skill">
+                <img src="imagens/Hards-Skills/js.png" alt="javascript" class="imgs-skill">
+                <img src="imagens/Hards-Skills/python.png" alt="python" class="imgs-skill">
+                <img src="imagens/Hards-Skills/wordpress.png" alt="wordpress" class="imgs-skill">
+            </div>
+        </section>
 
-        <div id="sociais" class="titulodecadatopico"><h1>Redes Sociais</h1></div>
-
-        <!-- Tópico das midias sociais-->
-        <div id="ultimaDiv">
-            <div><a href="https://wa.me/qr/3QZVNEICQGXNJ1" target="_blank"><img src="imagens/whatsapp.png" id="whats" class="sociais"></a></div>
-            <div><a href=""><img src="imagens/gmail.png" id="gmail" class="sociais"></a></div>
-            <div><a href="https://www.linkedin.com/in/matheusmansanorodrigues/" target="_blank">
-            <img src="imagens/linkedin.png" id="linkedin" class="sociais"></a></div>
-            <div><a href="https://github.com/akiramath" target="_blank"><img src="imagens/github.png" id="git" class="sociais"></a></div>
-        </div>
-    </section>
+        <section id="Redes">
+            <div class="div-social">
+                <h3>Minhas Redes Sociais:</h3>
+                <a href="https://trailblazer.me/id/mmansanorodrigues" target="_blank"><img src="imagens/Sociais/trailhead.png" alt="trailhead" class="sociais sales"></a>
+                <a href="https://www.linkedin.com/in/matheusrrodrigues/" target="_blank"><img src="imagens/Sociais/linkedin.png" alt="linkedin" class="sociais"></a>
+                <a href="https://wa.me/qr/3QZVNEICQGXNJ1" target="_blank"><img src="imagens/Sociais/whatsapp.png" alt="whatsapp" class="sociais"></a>
+                <a href="https://github.com/akiramath" target="_blank"><img src="imagens/Sociais/github.png" alt="github" class="sociais"></a>
+            </div>
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
