@@ -10,6 +10,17 @@ html{
     scroll-behavior: smooth;
 }
 
+/* Custumizando o scroll*/
+body::-webkit-scrollbar{
+    width: 12px;
+    background-color: #000000;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 20px;
+}
+
 body{
     background-color: #000000;
     width: 100vw;
@@ -21,7 +32,7 @@ video{
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 90em;
 }
 
 /* Header */
@@ -31,25 +42,30 @@ header{
     width: 100vw;
     height: 60px;
     top: 0;
-    display: flex;
-    justify-content: center;
     z-index: 1;
 }
 
-header h1{
-    margin: 10px 0 0 40px;
-    padding: 10px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+#menu{
+    display: none;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 20px;
 }
 
-header nav{
+#itens nav{
     margin-top: 30px;
 }
 
+#itens{
+    width: 100%;
+    text-align: center;
+}
+
 .a-header{
-    margin:0 90px;
-    padding: 10px;
+    margin: 0 5%;
+    padding: 15px;
     background-color: rgb(251,252,251);
     border-radius: 10px;
     text-decoration: none;
@@ -82,7 +98,7 @@ main{
 }
 
 .perfil-txt h1{
-    width: 700px;
+    width: 800px;
     background-color: white;
     color: black;
     margin: auto;
@@ -120,17 +136,17 @@ main{
     display: none;
     background-color: white;
     color: black;
-    width: 900px;
+    width: 800px;
     padding: 20px;
     margin: auto;
-    font-size: 20px;
+    font-size: 1.2em;
     border-radius: 30px;
 }
 
 /* Projetos */
 
 #projetos-todo{
-    width: 1000px;
+    width: 70%;
     display: flex;
     justify-content: center;
     background-color: white;
@@ -139,9 +155,14 @@ main{
     border-radius: 30px;
 }
 
+.img-buttons{
+    display: flex;
+    justify-content: center;
+}
+
 .imgproj{
-    width: 600px;
-    margin: 30px 0 0 30px;
+    width: 500px;
+    margin: 30px 20px 0 20px;
     border-radius: 30px;
     border: 1px solid black;
     cursor: pointer;
@@ -151,22 +172,10 @@ span{
     pointer-events: none;
 }
 
-#ant{
-    position: absolute;
-    margin-top: 10rem;
-    margin-left: -50px;
-    background-color: black;
-    color: white;
+#ant, #prox{
+    height: 70px;
     padding: 20px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-#prox{
-    position: absolute;
-    margin-top: 10rem;
-    margin-left: 13px;
+    margin-top: 11em;
     background-color: black;
     color: white;
     padding: 20px;
@@ -186,16 +195,16 @@ span{
 }
 
 #conteudo-proj{
-    width: 600px;
+    width: 80%;
     margin: 50px auto;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 
 /* Hard Skill */
 
 #hardskill-todo{
-    width: 70rem;
+    width: 80%;
     margin: 100px auto;
     background-color: white;
     border-radius: 30px;
@@ -207,7 +216,7 @@ span{
 .div-social h3{
     text-align: center;
     margin: 10px 0 30px 0;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -222,7 +231,6 @@ span{
     width: 200px;
 }
 
-
 .sales{
     width: 200px;
 }
@@ -230,10 +238,11 @@ span{
 .sales:hover{
     width: 250px;
 }
+
 /* Redes Sociais */
 
 #Redes{
-    width: 70rem;
+    width: 80%;
     margin: auto;
     margin-bottom: 100px;
     background-color: white;

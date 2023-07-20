@@ -1,5 +1,6 @@
 let txt = document.getElementById('sobremim');
 var imagens = ["imagens/Projetos/tarefa.png", "imagens/Projetos/cordel.png", "imagens/Projetos/form.png", "imagens/Projetos/login.png"];
+var a = ["https://akiramath.github.io/Projeto-Tarefa/", "https://akiramath.github.io/Projeto-Cordel/", "https://akiramath.github.io/Formulario/", "https://akiramath.github.io/Pagina-de-login/"]
 var titulos = ["Projeto de lista de Tarefas:", "Projeto Cordel:", "Projeto de Formulário", "Projeto de Login:"]
 var ps = [ 
     `Desenvolver este projeto em JavaScript me permitiu aprofundar meus conhecimentos na linguagem, explorando recursos avançados, como filtros e opções de pesquisa. Além disso, aprendi a armazenar as tarefas localmente, oferecendo aos usuários a capacidade de salvar, excluir e editar suas tarefas. Foi uma experiência extremamente empolgante e valiosa do ponto de vista de aprendizado. Estou imensamente satisfeito por ter concluído esse projeto e orgulhoso do resultado alcançado.`,
@@ -45,8 +46,29 @@ function atualizarConteudo() {
     var titulo = document.getElementById("titulo-proj");
     var imagem = document.getElementById("img");
     var descricao = document.getElementById("conteudo-proj");
+    var ancoraImg = document.getElementById('a');
   
+    ancoraImg.href = a[idx];
     titulo.textContent = titulos[idx];
     imagem.src = imagens[idx];
     descricao.textContent = ps[idx];
+}
+
+// função do hamburger
+const itens = document.getElementById('itens');
+
+function tamanhotela(){
+  if(window.innerWidth >= 500){
+    itens.style.display = 'block'
+  }else{
+    itens.style.display = 'none'
+  }
+}
+
+function menu() {
+  if(itens.style.display == 'none'){
+    itens.style.display = 'block';
+  }else{
+    itens.style.display = 'none';
+  }
 }
