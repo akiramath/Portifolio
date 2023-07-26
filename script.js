@@ -1,74 +1,68 @@
-let txt = document.getElementById('sobremim');
-var imagens = ["imagens/Projetos/tarefa.png", "imagens/Projetos/cordel.png", "imagens/Projetos/form.png", "imagens/Projetos/login.png"];
-var a = ["https://akiramath.github.io/Projeto-Tarefa/", "https://akiramath.github.io/Projeto-Cordel/", "https://akiramath.github.io/Formulario/", "https://akiramath.github.io/Pagina-de-login/"]
-var titulos = ["Projeto de lista de Tarefas:", "Projeto Cordel:", "Projeto de Formulário", "Projeto de Login:"]
-var ps = [ 
-    `Desenvolver este projeto em JavaScript me permitiu aprofundar meus conhecimentos na linguagem, explorando recursos avançados, como filtros e opções de pesquisa. Além disso, aprendi a armazenar as tarefas localmente, oferecendo aos usuários a capacidade de salvar, excluir e editar suas tarefas. Foi uma experiência extremamente empolgante e valiosa do ponto de vista de aprendizado. Estou imensamente satisfeito por ter concluído esse projeto e orgulhoso do resultado alcançado.`,
+// funcao do header
 
-    `Nesse projeto foi abordado o estudo do efeito Parallax, no qual criei um site com um poema onde as imagens mudam à medida que você rola a tela. Foi uma experiência fascinante e enriquecedora, proporcionando um aprendizado significativo nesse campo.`,
+let ind = document.getElementById('ind');
+let a = document.querySelector('.links')
 
-    `Utilizando meus conhecimentos, desenvolvi um projeto de formulário no qual explorei o uso de media queries para torná-lo responsivo. A experiência de trabalhar nesse projeto foi gratificante e me proporcionou um aprendizado significativo.`,
+function mover(targetElement, targetPosition, verticalPosition) {
+  targetElement.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 
-    ` Este projeto foi desenvolvido com base no meu aprendizado no curso de HTML e CSS do Curso em Vídeo. Foi abordado o estudo de media queries e sua aplicação prática, permitindo tornar o site responsivo em diferentes dispositivos, como computadores, televisores, tablets e smartphones. A experiência de participar desse projeto foi incrível e me proporcionou um aprendizado valioso.` ];
+  // Atualize a posição da barra de indicação de navegação e funçao do deslocamento vertical.
+  if (window.innerWidth <= 600) {
+    ind.style.transform = `translateY(${verticalPosition}px)`;
+  } else {
+    ind.style.transform = `translateX(${targetPosition}px)`;
+  }
 
-var idx = 0;
+  if (targetPosition === 205) {
+    ind.style.width = '95px';
+  } else {
+    ind.style.width = '90px';
+  }
 
-
-// botao sobre mim
-function sobre(){
-    if(txt.style.display == 'block'){
-        txt.style.display = 'none';
-    } else {
-        txt.style.display = 'block';
-    }
+  // Adicione a classe "clicked" ao link clicado
+  const links = document.getElementsByClassName('links');
+  for (let i = 0; i < links.length; i++) {
+    links[i].classList.remove('clicked');
+  }
+  event.target.classList.add('clicked');
 }
 
-// projetos
-function trocarAnterior() {
-    if (idx > 0) {
-      idx--;
-    } else {
-      idx = imagens.length - 1;
-    }
-    atualizarConteudo();
+// funcao da experiência
+let txts = document.getElementById('conteudos');
+let p = document.getElementById('conteudo-txt');
+let h1 = document.getElementById('conteudo-h1');
+
+function salesforce(){
+  h1.innerHTML = 'Experiência com Salesforce:';
+  p.innerHTML = 'Durante o meu tempo em cursos que concluí, adquiri conhecimentos sólidos em HTML, CSS e possuo um conhecimento básico de Javascript e Apex.<br><br> Há cerca de seis meses, comecei a estudar Salesforce na plataforma da Thailhead, consegui o nível de Ranger e estou cada vez mais aprofundando meus conhecimentos em Salesforce Admin e Developer. Concluí um curso de Salesforce Admin na MJV School em 2022, que durou três meses. Neste curso, tive a oportunidade de aplicar meus conhecimentos ao implementar o Salesforce em uma empresa fictícia. Participei ativamente de atividades como gestão de leads, filas, criação de um site simples com formulário para captura de leads, tarefas, fluxos, aprovação de oportunidades pelo gerente, utilização de fórmulas, criação de relatórios e painéis, além de trabalhar com objetos personalizados, regras de validação e hierarquia de papéis. Esse projeto foi extremamente gratificante e me permitiu um crescimento significativo em minhas habilidades.<br><br> Estou animado para aplicar meus conhecimentos de Salesforce e continuar a desenvolver minhas habilidades nessa área. Sou uma pessoa proativa e focada, sempre em busca de entregar o melhor resultado para a empresa e fazer parte de uma equipe de alto desempenho.</p>';
 }
 
-function trocarProxima() {
-    if (idx < imagens.length - 1) {
-      idx++;
-    } else {
-      idx = 0;
-    }
-    atualizarConteudo();
+function frontEnd(){
+  h1.innerHTML = 'Experiência com Front-End:';
+  p.innerHTML = 'Faz 4 meses iniciei minha jornada como desenvolvedor front-end. Estou extremamente empolgado com o aprendizado que venho conquistando nesta área fascinante. Com a dedicação em cursos e muita prática, adquiri conhecimentos sólidos em HTML, CSS, JavaScript e até Python, proporcionando-me uma base diversificada para construir experiências digitais incríveis. <br><br> Durante essa jornada, não me limitei apenas à teoria, mas também me desafiei a colocar em prática o que aprendi. Concluir três projetos significativos que se encontram na próxima seção. Tenho um repositório no GitHub com outros trabalhos que demonstrei ao longo do meu aprendizado. Fique à vontade para dar uma olhada em <a href="https://github.com/akiramath?tab=repositories" target="_blank" style="color: rgb(190, 134, 157);">www.github.com.br/perfil.</a>, onde compartilho mais sobre a minha jornada de aprendizado e meu crescimento contínuo. <br><br>Acredito que o aprendizado é uma busca constante, e estou ansioso para enfrentar novos desafios. Meu objetivo agora é aplicar meus conhecimentos em projetos reais e aprender ainda mais com profissionais experientes em uma equipe colaborativa. Se você se identificou com meu perfil e projetos, ficarei muito feliz em fazer contato para discutir possíveis oportunidades de colaboração, eu prezo pelo comprometimento com a excelência em tudo o que faço, buscando criar interfaces atraentes, responsivas e altamente funcionais.';
 }
 
-function atualizarConteudo() {
-    var titulo = document.getElementById("titulo-proj");
-    var imagem = document.getElementById("img");
-    var descricao = document.getElementById("conteudo-proj");
-    var ancoraImg = document.getElementById('a');
-  
-    ancoraImg.href = a[idx];
-    titulo.textContent = titulos[idx];
-    imagem.src = imagens[idx];
-    descricao.textContent = ps[idx];
-}
+// funcao hamburger
 
-// função do hamburger
-const itens = document.getElementById('itens');
+function tamanhoTela(){
+  let h = document.getElementById('h');
 
-function tamanhotela(){
-  if(window.innerWidth >= 500){
-    itens.style.display = 'block'
+  if(window.innerWidth <= 600){
+    h.style.display = 'block';
   }else{
-    itens.style.display = 'none'
+    h.style.display = 'none';
   }
 }
 
-function menu() {
-  if(itens.style.display == 'none'){
-    itens.style.display = 'block';
+function menu(){
+  let nav = document.getElementById('nav');
+
+  if(nav.style.display == 'none'){
+    nav.style.display = 'flex';
   }else{
-    itens.style.display = 'none';
+    nav.style.display = 'none';
   }
 }

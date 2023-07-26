@@ -1,0 +1,594 @@
+@media screen and (max-width:600px){
+    /* Header */
+    #h{
+        width: 40px;
+        height: 40px;
+        margin: 20px 30px;
+        pointer-events: all;
+        cursor: pointer;
+    }
+
+    .logo{
+        width: 60px;
+        height: 60px;
+        margin-left: 20px;
+    }
+    
+    header nav{
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        right: 0;
+        height: 150px;
+        margin: 70px 30px 0 0;
+    }
+    
+    .links{
+        width: 100px;
+        margin: 5px 0;
+    }
+    
+    .links:nth-child(2){
+        left: auto;
+    }
+    
+    #ind{
+        height: 35px;
+    }
+    
+    /* Main */
+    
+    .home{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 400px;
+    }
+    
+    .txt-home h1{
+        font-size: 2em;
+    }
+    
+    .txt-home h3{
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+
+    .txt-home button{
+        margin: 0 10px;
+        padding: 10 px;
+        font-size: 13px;
+    }
+
+    #baixar{
+        margin-left: 0;
+    }
+
+    /* Sobre */
+
+    .sobre{
+        height: 900px;
+    }
+
+    .box-sobre{
+        margin-top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 600px;
+    }
+    
+    #eu{
+        width: 150px;
+        height: 150px;
+        margin: 10px auto;
+    }
+    
+    .txt-sobre{
+        width: 400px;
+        text-align: center;
+    }
+    
+    .txt-sobre h1{
+        margin-top: -30px;
+        font-size: 1.4em;
+    }
+    
+    .txt-sobre p{
+        width: 350px;
+        margin: auto;
+        font-size: 16px;
+    }
+
+    /* Experiencia */
+
+    .exp{
+        display: flex;
+        flex-direction: column;
+        height: 750px;
+    }
+
+    .buttons-exp{
+        display: flex;
+        flex-direction: row;
+        margin-left: 80px;
+        width: 100%;
+        height: 80px;
+    }
+
+    .exps{
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 50px;
+        font-size: 13px;
+    }
+
+    #conteudos{
+        width: 350px;
+        margin: 50px auto;
+        text-align: center;
+    }
+    
+    #conteudo-h1{
+        font-size: 1.4em;
+    }
+    
+    #conteudo-txt{
+        font-size: 16px;
+    }
+
+    /* Projetos */
+
+    .projetos{
+        height: 130em;
+    }
+    
+    .conteiner{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+    
+    .cards{
+        width: 300px;
+        height: 550px;
+        margin: 30px 0;
+        pointer-events: none;
+    }
+    
+    .proj-box{
+        width: 250px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #login{
+        width: 385px;
+        margin-left: 110px;
+    }
+    
+    #form{
+        width: 380px;
+        margin-left: -100px;
+    }
+    
+    .proj-txt{
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        margin-top: 250px;
+    }
+    
+    .proj-titulo{
+        width: 100%;
+        color: black;
+        text-align: center;
+    }
+    
+    .proj-conteudo{
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Hard Skills*/
+
+    .hardskills{
+        height: 300px;
+    }
+    
+    .hardskills h1{
+        margin: 30px 0;
+        font-size: 1.4em;
+    }
+    
+    #sales{
+        width: 100px;
+    }
+    
+    .skill-imgs{
+        width: 50px;
+        margin: 10px 20px;
+        pointer-events: none;
+    }
+        
+    /* Separador de conteúdo */
+    
+    .separador-baixo-white{
+        margin-top: 53.5em;
+    }
+    
+    .separador-baixo-marrom{
+        margin-top: 55em;
+    }
+
+    #sbw-600px{
+        position: absolute;
+        background-color: white;
+        width: 85%;
+        height: 40px;
+        margin-top: 126.5em;
+        left: auto;
+        border-radius: 30px 30px 0 0;
+        z-index: 0;
+    }
+    
+    #sbm-600px{
+        position: absolute;
+        background-color: rgb(36,31,33);
+        width: 100%;
+        height: 40px;
+        left: 0;
+        margin-top: 128em;
+        border-radius: 30px 30px 0 0;
+        z-index: 1;
+    }
+    
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px){
+
+    /* Header */
+
+    .logo{
+        width: 80px;
+        height: 80px;
+        margin-left: 40px;
+    }
+    
+    header nav{
+        margin: 20px 20px 0 0;
+    }
+    
+    .links{
+        font-size: 18px;
+        width: 100px;
+        margin: 0;
+    }
+    
+    /* Main */
+    
+    .home{
+        height: 500px;
+    }
+    
+    .txt-home h1{
+        font-size: 2.5em;
+    }
+    
+    .txt-home h3{
+        font-size: 1.5em;
+        margin-bottom: 40px;
+    }
+
+    .txt-home button{
+        font-size: 16px;
+    }
+
+    #baixar{
+        margin-left: 0;
+    }
+
+    /* Sobre */
+
+    .sobre{
+        height: 1000px;
+    }
+
+    .box-sobre{
+        margin-top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 650px;
+    }
+    
+    #eu{
+        width: 200px;
+        height: 200px;
+        margin: 30px auto;
+    }
+    
+    .txt-sobre{
+        width: 500;
+        text-align: center;
+    }
+    
+    .txt-sobre h1{
+        margin: 20px auto;
+        font-size: 1.5em;
+        
+    }
+    
+    .txt-sobre p{
+        width: 450px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    /* Experiencia */
+
+    .exp{
+        display: flex;
+        flex-direction: column;
+        height: 650px;
+    }
+
+    .buttons-exp{
+        display: flex;
+        flex-direction: row;
+        margin-left: 80px;
+        width: 100%;
+        height: 80px;
+    }
+
+    .exps{
+        padding: 10px;
+        margin-top: 30px;
+        margin-left: 50px;
+        font-size: 16px;
+    }
+
+    #conteudos{
+        width: 500px;
+        margin: 50px auto;
+        text-align: center;
+    }
+    
+    #conteudo-h1{
+        font-size: 1.5em;
+    }
+    
+    #conteudo-txt{
+        font-size: 16px;
+    }
+
+    /* Projetos */
+
+    .projetos{
+        height: 110em;
+    }
+    
+    .conteiner{
+        display: flex;
+        flex-direction: column;
+        margin-top: 150px;
+    }
+    
+    .cards{
+        width: 500px;
+        height: 450px;
+        margin: 30px 0;
+        pointer-events: none;
+    }
+    
+    .proj-box{
+        width: 350px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #tarefa{
+        width: 350px;
+    }
+
+    #login{
+        width: 385px;
+        margin-left: 100px;
+    }
+    
+    #form{
+        width: 380px;
+        margin-left: -100px;
+    }
+    
+    .proj-txt{
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        margin-top: 250px;
+    }
+    
+    .proj-titulo{
+        width: 100%;
+        color: black;
+        text-align: center;
+    }
+    
+    .proj-conteudo{
+        color: black;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    /* Hard Skills*/
+
+    .hardskills{
+        height: 300px;
+    }
+    
+    .hardskills h1{
+        margin: 30px 0;
+        font-size: 1.5em;
+    }
+    
+    #sales{
+        width: 150px;
+    }
+    
+    .skill-imgs{
+        width: 100px;
+        margin: 10px 20px;
+        pointer-events: none;
+    }
+        
+    /* Separador de conteúdo */
+    
+    .separador-cima-white{
+        width: 85%;
+        left: auto;
+    }
+    
+    .separador-baixo-white{
+        width: 85%;
+        margin-top: 58.5em;
+        left: auto;
+    }
+    
+    .separador-baixo-marrom{
+        margin-top: 60em;
+    }
+
+    #sbw-600px{
+        position: absolute;
+        background-color: white;
+        width: 85%;
+        height: 40px;
+        margin-top: 107.5em;
+        left: auto;
+        border-radius: 30px 30px 0 0;
+        z-index: 0;
+    }
+    
+    #sbm-600px{
+        position: absolute;
+        background-color: rgb(36,31,33);
+        width: 100%;
+        height: 40px;
+        left: 0;
+        margin-top: 109em;
+        border-radius: 30px 30px 0 0;
+        z-index: 1;
+    }
+    
+}
+
+@media screen and (min-width: 801px) and (max-width: 1210px){
+    #eu{
+        width: 200px;
+        height: 200px;
+    }
+    
+    .txt-sobre{
+        width: 400px;
+    }
+    
+    .txt-sobre h1{
+        margin: 20px;
+        font-size: 1.5em;
+        
+    }
+    
+    .txt-sobre p{
+        width: 350px;
+        margin: 0 auto;
+        font-size: 16px;
+    }
+
+    /* Experiência */
+
+    .exp{
+        height: 650px;
+    }
+
+    .buttons-exp{
+        margin-left: 0;
+        width: 200px;
+        height: 80px;
+    }
+
+    .exps{
+        margin-left: 50px;
+    }
+
+    #conteudos{
+        width: 500px;
+        margin: 50px auto;
+    }
+
+    /* Projetos */
+
+    .projetos{
+        height: 70em;
+    }
+
+    .conteiner{
+        align-items: center;
+        transform: translateY(-300px);
+    }
+    
+    .cards{
+        margin-top: 10px;
+    }
+
+    #cardfinal{
+        position: absolute;
+        top: 45em;
+        left: 13em;
+    }
+
+    #cardfinal:hover{
+        transform: translateY(-50px);
+    }
+
+    /* Separadores */
+
+    .separador-cima-white{
+        width: 85%;
+        left: auto;
+    }
+    
+    .separador-baixo-white{
+        width: 85%;
+        margin-top: 46.5em;
+        left: auto;
+    }
+    
+    .separador-baixo-marrom{
+        margin-top: 48em;
+    }
+
+    #sbw-600px{
+        position: absolute;
+        background-color: white;
+        width: 85%;
+        height: 40px;
+        margin-top: 66.5em;
+        left: auto;
+        border-radius: 30px 30px 0 0;
+        z-index: 0;
+    }
+    
+    #sbm-600px{
+        position: absolute;
+        background-color: rgb(36,31,33);
+        width: 100%;
+        height: 40px;
+        left: 0;
+        margin-top: 68em;
+        border-radius: 30px 30px 0 0;
+        z-index: 1;
+    }
+}

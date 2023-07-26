@@ -3,78 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/media-quiries.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-queries.css">
+    <script src="script.js" defer></script>
     <title>Portifólio</title>
 </head>
-<body id="bd" onresize="tamanhotela()">
-    <video src="imagens/fundo.mp4" autoplay loop muted></video>
+<body onresize="tamanhoTela()">
     <header>
-        <span class="material-symbols-outlined" id="menu" onclick="menu()">menu</span>
-        <div id="itens">
-            <nav>
-                <a class="a-header" href="index.html">Home</a>
-                <a class="a-header" href="#Projetos">Projetos</a>
-                <a class="a-header" href="#HardSkill">Hard Skill</a>
-                <a class="a-header" href="#Redes">Sociais</a>
-            </nav>
-        </div>
+        <img src="imagens/logo.png" alt="logo" class="logo">
+        <nav id="nav">
+            <a href="#home" class="links clicked" onclick="mover(document.getElementById('home'), 0, 0)">Home</a>
+            <a href="#sobre" class="links" onclick="mover(document.getElementById('sobre'), 90, 30)">Sobre</a>
+            <a href="#exp" class="links" onclick="mover(document.getElementById('exp'), 205, 65)">Experiencia</a>
+            <a href="#proj" class="links" onclick="mover(document.getElementById('proj'), 310, 95)">Projetos</a>
+            <div id="ind"></div>
+        </nav>
+        <img src="imagens/menu.png" alt="menu" id="h" onclick="menu()">
     </header>
     <main>
-        <section id="Perfil">
-            <div class="perfil-txt">
-                <h1>MATHEUS MANSANO <br>RODRIGUES</h1>
-                <h2>Desenvolvedor Front-end</h2>
-                <button onclick="sobre()">Sobre mim</button>
-                <p id="sobremim">Olá sou o Matheus tenho 24 anos, sou uma pessoa proativa que está sempre querendo expandir seus conhecimentos, 
-                    tenho conhecimento em HTML5, CSS, Javascript e Python - básico.
-                    Estou cursando a faculdade de Analise e Desenvolvimento de Sistemas atualmente e estou adorando, estou a procura de uma 
-                    oportunidade para colocar meus conhecimentos em prática e aprender mais a cada dia.....</p>
+        <section class="home" id="home">
+            <div class="txt-home">
+                <h1>Matheus Mansano Rodrigues</h1>
+                <h3>Desenvolvedor Front-end</h3>
+                <a href="https://www.linkedin.com/in/matheusrrodrigues/" target="_blank"><button>Linkedin</button></a>
+                <a href="https://github.com/akiramath" target="_blank"><button>Github</button></a>
             </div>
         </section>
-
-        <div id="Projetos"></div>
-        <section id="projetos-todo">
-            <div class="cadaprojeto">
-                <div class="img-buttons">
-                    <button id="ant" onclick="trocarAnterior()"><span class="material-symbols-outlined">keyboard_double_arrow_left</span></button>
-                    <a href="https://akiramath.github.io/Projeto-Tarefa/" id="a" target="_blank"><img src="imagens/Projetos/tarefa.png" class="imgproj" id="img"></a>
-                    <button id="prox" onclick="trocarProxima()"><span class="material-symbols-outlined">keyboard_double_arrow_right</span></button>
-                </div>
-
-                <p id="click">click na imagem para ver o projeto em uma nova aba</p>
-
-                <div class="txts-proj">
-                    <h3 id="titulo-proj">Projeto de lista de Tarefas:</h3>
-                    <p id="conteudo-proj">Desenvolver este projeto em JavaScript me permitiu aprofundar meus conhecimentos na linguagem, explorando recursos avançados, como filtros e opções de pesquisa. Além disso, aprendi a armazenar as tarefas localmente, oferecendo aos usuários a capacidade de salvar, excluir e editar suas tarefas. Foi uma experiência extremamente empolgante e valiosa do ponto de vista de aprendizado. Estou imensamente satisfeito por ter concluído esse projeto e orgulhoso do resultado alcançado.</p>
+        <section class="sobre" id="sobre">
+            <div class="separador-cima-marrom"></div>
+            <div class="separador-cima-white"></div>
+            <div class="box-sobre">
+                <img id="eu" src="imagens/eu.png" alt="minha foto">
+                <div class="txt-sobre">
+                    <h1>Sobre mim: </h1>
+                    <p>Olá, sou o Matheus, tenho 24 anos e sou uma pessoa proativa, sempre em busca de expandir meus conhecimentos. Atualmente, tenho experiência com HTML5, CSS, Javascript e tenho conhecimentos básicos em Python. Estou cursando a faculdade de Análise e Desenvolvimento de Sistemas e estou adorando a jornada de aprendizado.</p>
+                    <p>Estou ansioso para encontrar uma oportunidade que me permita aplicar meus conhecimentos na prática, enquanto continuo a aprimorar minhas habilidades dia após dia. Sou entusiasmado em fazer parte de projetos desafiadores e contribuir para o crescimento de uma equipe ou empresa. Se você procura alguém comprometido, dedicado e sempre aberto a novos desafios, estou pronto para dar o meu melhor.</p>
+                    <a href="curriculo-matheus.pdf" download><button id="baixar">Baixar CV</button></a>
                 </div>
             </div>
+            <div class="separador-baixo-white"></div>
+            <div class="separador-baixo-marrom"></div>
         </section>
 
-        <div id="HardSkill"></div>
-        <section id="hardskill-todo">
-            <div class="skills">
-                <h3>Tenho familiaridade com essas linguagens:</h3>
-                <img src="imagens/Hards-Skills/salesforce.png" alt="Salesforce" class="imgs-skill sales">
-                <img src="imagens/Hards-Skills/html.png" alt="html" class="imgs-skill">
-                <img src="imagens/Hards-Skills/css.png" alt="css" class="imgs-skill">
-                <img src="imagens/Hards-Skills/js.png" alt="javascript" class="imgs-skill">
-                <img src="imagens/Hards-Skills/python.png" alt="python" class="imgs-skill">
-                <img src="imagens/Hards-Skills/wordpress.png" alt="wordpress" class="imgs-skill">
+        <section class="exp" id="exp">
+            <div class="buttons-exp">
+                <button class="exps" onclick="salesforce()">Salesforce</button>
+                <button class="exps" onclick="frontEnd()">Front-end</button>
+            </div>
+            <div id="conteudos">
+                <h1 id="conteudo-h1">Experiência com Salesforce:</h1>
+                <p id="conteudo-txt">Durante o meu tempo em cursos que concluí, adquiri conhecimentos
+                    sólidos em HTML, CSS e possuo um conhecimento básico de Javascript e Apex.<br><br>
+
+                    Há cerca de seis meses, comecei a estudar Salesforce na plataforma da Thailhead, 
+                    consegui o nível de Ranger e estou cada vez mais aprofundando meus conhecimentos 
+                    em Salesforce Admin e Developer. Concluí um curso de Salesforce Admin na MJV School
+                    em 2022, que durou três meses. Neste curso, tive a oportunidade de aplicar meus
+                    conhecimentos ao implementar o Salesforce em uma empresa fictícia. Participei
+                    ativamente de atividades como gestão de leads, filas, criação de um site simples com
+                    formulário para captura de leads, tarefas, fluxos, aprovação de oportunidades
+                    pelo gerente, utilização de fórmulas, criação de relatórios e painéis, além de
+                    trabalhar com objetos personalizados, regras de validação e hierarquia de
+                    papéis. Esse projeto foi extremamente gratificante e me permitiu um
+                    crescimento significativo em minhas habilidades.<br><br>
+
+                    Estou animado para aplicar meus conhecimentos de Salesforce e continuar a
+                    desenvolver minhas habilidades nessa área. Sou uma pessoa proativa e focada,
+                    sempre em busca de entregar o melhor resultado para a empresa e fazer parte
+                    de uma equipe de alto desempenho.</p>
             </div>
         </section>
 
-        <section id="Redes">
-            <div class="div-social">
-                <h3>Minhas Redes Sociais:</h3>
-                <a href="https://trailblazer.me/id/mmansanorodrigues" target="_blank"><img src="imagens/Sociais/trailhead.png" alt="trailhead" class="sociais sales"></a>
-                <a href="https://www.linkedin.com/in/matheusrrodrigues/" target="_blank"><img src="imagens/Sociais/linkedin.png" alt="linkedin" class="sociais"></a>
-                <a href="https://wa.me/qr/3QZVNEICQGXNJ1" target="_blank"><img src="imagens/Sociais/whatsapp.png" alt="whatsapp" class="sociais"></a>
-                <a href="https://github.com/akiramath" target="_blank"><img src="imagens/Sociais/github.png" alt="github" class="sociais"></a>
+        <section class="projetos" id="proj">
+            <div class="separador-cima-marrom"></div>
+            <div class="separador-cima-white"></div>
+            <div class="conteiner">
+                
+                    <div class="cards">
+                        <div class="proj-box">
+                            <a href="https://akiramath.github.io/Projeto-Tarefa/" target="_blank"><img src="imagens/Projetos/tarefa.png" id="tarefa" alt="To-Do list"></a>
+                        </div>
+                        <p class="click">clique na imagem para ver o projeto melhor</p>
+                        <div class="proj-txt">
+                            <h1 class="proj-titulo">Projeto To Do List:</h1>
+                            <p class="proj-conteudo">Desenvolver este projeto em JavaScript me permitiu aprofundar meus conhecimentos na linguagem, explorando recursos avançados, como filtros e opções de pesquisa. Além disso, aprendi a armazenar as tarefas localmente, oferecendo aos usuários a capacidade de salvar, excluir e editar suas tarefas. Foi uma experiência extremamente empolgante e valiosa do ponto de vista de aprendizado. Estou imensamente satisfeito por ter concluído esse projeto e orgulhoso do resultado alcançado.</p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="proj-box">
+                            <a href="https://akiramath.github.io/Pagina-de-login/" target="_blank"><img src="imagens/Projetos/login.png" id="login" alt="Login"></a>
+                        </div>
+                        <p class="click">clique na imagem para ver o projeto melhor</p>
+                        <div class="proj-txt">
+                            <h1 class="proj-titulo">Projeto de Login:</h1>
+                            <p class="proj-conteudo">Este projeto foi desenvolvido com base no meu aprendizado no curso de HTML e CSS do Curso em Vídeo. Foi abordado o estudo de media queries e sua aplicação prática, permitindo tornar o site responsivo em diferentes dispositivos, como computadores, televisores, tablets e smartphones. A experiência de participar desse projeto foi incrível e me proporcionou um aprendizado valioso.</p>
+                        </div>
+                    </div>
+                
+                <div class="cards" id="cardfinal">
+                    <div class="proj-box">
+                        <a href="https://akiramath.github.io/Formulario/" target="_blank"><img src="imagens/Projetos/form.png" alt="form" id="form"></a>
+                    </div>
+                    <p class="click">clique na imagem para ver o projeto melhor</p>
+                    <div class="proj-txt">
+                        <h1 class="proj-titulo">Projeto de Formulário:</h1>
+                        <p class="proj-conteudo">Utilizando meus conhecimentos, desenvolvi um projeto de formulário no qual explorei o uso de media queries para torná-lo responsivo. A experiência de trabalhar nesse projeto foi gratificante e me proporcionou um aprendizado significativo.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="separador-baixo-white" id="sbw-600px"></div>
+            <div class="separador-baixo-marrom" id="sbm-600px"></div>
+        </section>
+
+        <section class="hardskills" id="hardskills">
+            <h1>Hard Skills:</h1>
+            <div class="hardskill-imagens">
+                <img src="imagens/HardSkill/salesforce.png" alt="salesforce" class="skill-imgs" id="sales">
+                <img src="imagens/HardSkill/html-5.png" alt="html" class="skill-imgs">
+                <img src="imagens/HardSkill/css-3.png" alt="css" class="skill-imgs">
+                <img src="imagens/HardSkill/js.png" alt="js" class="skill-imgs">
+                <img src="imagens/HardSkill/python.png" alt="python" class="skill-imgs">
+                <img src="imagens/HardSkill/wordpress.png" alt="wordpress" class="skill-imgs">
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
 </body>
 </html>
