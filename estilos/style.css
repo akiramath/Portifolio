@@ -33,10 +33,6 @@ header{
     margin-left: 50px;
 }
 
-#h{
-    display: none;
-}
-
 header nav{
     display: flex;
     position: relative;

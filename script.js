@@ -9,17 +9,18 @@ function mover(targetElement, targetPosition, verticalPosition) {
     block: 'start'
   });
 
-  // Atualize a posição da barra de indicação de navegação e funçao do deslocamento vertical.
-  if (window.innerWidth <= 600) {
-    ind.style.transform = `translateY(${verticalPosition}px)`;
-  } else {
-    ind.style.transform = `translateX(${targetPosition}px)`;
-  }
+  ind.style.transform = `translateX(${targetPosition}px)`;
 
+  //Arrumar para celular.
   if (targetPosition === 205) {
     ind.style.width = '95px';
+    ind.style.transform = `translateX(200px)`;
   } else {
     ind.style.width = '90px';
+  }
+
+  if (targetPosition === 310) {
+    ind.style.transform = `translateX(300px)`;
   }
 
   // Adicione a classe "clicked" ao link clicado
@@ -43,26 +44,4 @@ function salesforce(){
 function frontEnd(){
   h1.innerHTML = 'Experiência com Front-End:';
   p.innerHTML = 'Faz 4 meses iniciei minha jornada como desenvolvedor front-end. Estou extremamente empolgado com o aprendizado que venho conquistando nesta área fascinante. Com a dedicação em cursos e muita prática, adquiri conhecimentos sólidos em HTML, CSS, JavaScript e até Python, proporcionando-me uma base diversificada para construir experiências digitais incríveis. <br><br> Durante essa jornada, não me limitei apenas à teoria, mas também me desafiei a colocar em prática o que aprendi. Concluir três projetos significativos que se encontram na próxima seção. Tenho um repositório no GitHub com outros trabalhos que demonstrei ao longo do meu aprendizado. Fique à vontade para dar uma olhada em <a href="https://github.com/akiramath?tab=repositories" target="_blank" style="color: rgb(190, 134, 157);">www.github.com.br/perfil.</a>, onde compartilho mais sobre a minha jornada de aprendizado e meu crescimento contínuo. <br><br>Acredito que o aprendizado é uma busca constante, e estou ansioso para enfrentar novos desafios. Meu objetivo agora é aplicar meus conhecimentos em projetos reais e aprender ainda mais com profissionais experientes em uma equipe colaborativa. Se você se identificou com meu perfil e projetos, ficarei muito feliz em fazer contato para discutir possíveis oportunidades de colaboração, eu prezo pelo comprometimento com a excelência em tudo o que faço, buscando criar interfaces atraentes, responsivas e altamente funcionais.';
-}
-
-// funcao hamburger
-
-function tamanhoTela(){
-  let h = document.getElementById('h');
-
-  if(window.innerWidth <= 600){
-    h.style.display = 'block';
-  }else{
-    h.style.display = 'none';
-  }
-}
-
-function menu(){
-  let nav = document.getElementById('nav');
-
-  if(nav.style.display == 'none'){
-    nav.style.display = 'flex';
-  }else{
-    nav.style.display = 'none';
-  }
 }

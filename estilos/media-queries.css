@@ -1,20 +1,6 @@
 @media screen and (max-width:600px){
     /* Header */
 
-    header{
-        position: fixed;
-        width: 100%;
-        z-index: 2;
-    }
-
-    #h{
-        width: 40px;
-        height: 40px;
-        margin: 20px 50px;
-        pointer-events: all;
-        cursor: pointer;
-    }
-
     .logo{
         width: 60px;
         height: 60px;
@@ -22,25 +8,17 @@
     }
     
     header nav{
-        position: absolute;
-        display: none;
-        flex-direction: column;
-        right: 0;
-        height: 150px;
-        margin: 70px 30px 0 0;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        border-radius: 10px 10px 0 0;
     }
-    
-    .links{
-        width: 100px;
-        margin: 5px 0;
-    }
-    
-    .links:nth-child(2){
-        left: auto;
-    }
-    
+
     #ind{
-        height: 35px;
+        left: 45px;
     }
     
     /* Main */
